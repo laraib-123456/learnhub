@@ -1,0 +1,18 @@
+const mongose = require("mongoose");
+const courseschema = new mongose.Schema(
+    {
+        title : {type: String,required: true},
+        description : {type: String,required: true},
+        instructor : {type: String,required: true},
+        duration : {type: String,required: true},
+        level : {type: String,required: true},
+        price : {type: Number,required: true},
+        category : {type: String,required: true},
+        image : {type: String,required: true}
+    },
+    
+    {timestamps : true}
+
+);
+
+module.exports = mongose.model("Course",courseschema);
